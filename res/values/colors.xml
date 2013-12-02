@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="pressed_imdb">#CCE8C61E</color>
+    <color name="search_header_background">#333333</color>
+    <color name="dashboard_textfield_color">#ff666666</color>
+    <color name="white">#ffffff</color>
+    <color name="text">#ff8d8d8d</color>
+    <color name="card_title_text">#ff707070</color>
+    <color name="dark_bg">#ff1d1d1d</color>
+    <color name="text_dark">#ff555555</color>
+    <color name="light_bg">#ffe1e1e1</color>
+    <color name="med_bg">#ff595959</color>
+    <color name="light_div">#ffc2c2c2</color>
+    <color name="smooth">#99FAFAFA</color>
+
+</resources>

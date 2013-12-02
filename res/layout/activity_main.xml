@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_view"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/search_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="@null" >
+
+        <LinearLayout
+            android:id="@+id/search_option_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip" >
+
+            <ImageButton
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:background="@drawable/selectable_background_imdb"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_action_action_search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="2.0dip"
+            android:layout_toLeftOf="@+id/search_option_container"
+            android:background="@drawable/textfield_activated_holo_light"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/dashboard_search_field"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip"
+                android:background="@null"
+                android:hint="@string/dashboard_search_field_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textColorHint="@color/dashboard_textfield_color"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_header"
+        android:layout_marginTop="20dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0dip"
+        android:listSelector="@android:color/transparent" />
+
+</RelativeLayout>

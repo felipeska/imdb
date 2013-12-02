@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.Imdb" parent="@style/Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_imdb</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Imdb</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Imdb</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Imdb</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Imdb</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Imdb</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_imdb</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_imdb</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Imdb</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Imdb.Widget</item>
+    </style>
+
+    <style name="ImdbProgressDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:textColor">@color/pressed_imdb</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ActionBar.Solid.Imdb" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_imdb</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_imdb</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_imdb</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Imdb</item>
+        <item name="android:titleTextStyle">@style/TitleTextStyle</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Imdb" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_imdb</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Imdb</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Imdb.Widget" parent="@style/Theme.Sherlock">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Imdb</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Imdb</item>
+    </style>
+
+</resources>

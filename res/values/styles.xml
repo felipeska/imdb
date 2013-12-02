@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Imdb" parent="@style/Theme.Sherlock.Light.DarkActionBar">
+        <item name="actionBarItemBackground">@drawable/selectable_background_imdb</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Imdb</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Imdb</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Imdb</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Imdb</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Imdb</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_imdb</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_imdb</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Imdb</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="actionBarWidgetTheme">@style/Theme.Imdb.Widget</item>
+    </style>
+
+    <style name="ActionBar.Solid.Imdb" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/ab_solid_imdb</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_imdb</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_imdb</item>
+        <item name="progressBarStyle">@style/ProgressBar.Imdb</item>
+    </style>
+
+    <style name="ImdbProgressDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:textColor">@color/pressed_imdb</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Imdb" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="background">@drawable/ab_transparent_imdb</item>
+        <item name="progressBarStyle">@style/ProgressBar.Imdb</item>
+    </style>
+
+    <style name="PopupMenu.Imdb" parent="@style/Widget.Sherlock.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_imdb</item>
+    </style>
+
+    <style name="DropDownListView.Imdb" parent="@style/Widget.Sherlock.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_imdb</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Imdb" parent="@style/Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_imdb</item>
+    </style>
+
+    <style name="DropDownNav.Imdb" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_imdb</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_imdb</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_imdb</item>
+    </style>
+
+    <style name="ProgressBar.Imdb" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_imdb</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Imdb" parent="@style/Widget.Sherlock.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_imdb</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Imdb.Widget" parent="@style/Theme.Sherlock">
+        <item name="popupMenuStyle">@style/PopupMenu.Imdb</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Imdb</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textSize">@dimen/small_text</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextTitle" parent="@style/Text">
+        <item name="android:textSize">@dimen/large_text</item>
+        <item name="android:textColor">@color/card_title_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+</resources>

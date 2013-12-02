@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/light_bg"
+        tools:ignore="UselessParent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fanart_height"
+            android:background="@color/dark_bg" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/dark_bg" >
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/screenCap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            tools:ignore="ObsoleteLayoutParam" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/fanart_height_push" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="4.0dip"
+                        android:background="@color/pressed_imdb" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/light_bg"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="40.0dip"
+                            android:background="@color/med_bg"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/small_unit"
+                            android:paddingLeft="@dimen/half_unit"
+                            android:paddingRight="@dimen/half_unit"
+                            android:paddingTop="@dimen/small_unit" >
+
+                            <TextView
+                                android:id="@+id/resumeTitle"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8.0dip"
+                                android:layout_weight="1.0"
+                                android:fontFamily="sans-serif"
+                                android:singleLine="true"
+                                android:text="@string/resume_title"
+                                android:textAllCaps="false"
+                                android:textColor="@color/pressed_imdb"
+                                android:textSize="@dimen/med_large_text" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_marginLeft="8.0dip"
+                            android:layout_marginRight="8.0dip"
+                            android:background="@color/light_div" />
+
+                        <TextView
+                            android:id="@+id/summary"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:drawablePadding="8.0dip"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="fill_vertical"
+                            android:lineSpacingExtra="2.0dip"
+                            android:paddingLeft="16.0dip"
+                            android:paddingRight="16.0dip"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor porta mauris sed dictum. Morbi felis arcu, aliquet et porttitor sed, euismod sed felis. Fusce in lorem et velit consectetur blandit a nec ligula. In dui est, faucibus a pulvinar id, varius in risus. Mauris magna magna, semper sed congue et, gravida at nulla. In a risus velit. Sed eget consectetur metus. Vivamus et massa sit amet diam luctus iaculis eu varius nulla. Vestibulum enim ante, aliquet vel porttitor euismod, consequat et velit. Morbi cursus, magna sed bibendum bibendum, erat erat posuere libero, vitae gravida erat erat eu libero.\n\nSed et tempus lorem. Aenean ut sapien in augue auctor sollicitudin auctor a massa. Maecenas euismod neque ut risus rutrum euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi ipsum magna, vehicula vel dictum a, eleifend ut tellus. Nullam a magna quis diam rhoncus molestie sed sit amet lacus. Phasellus ac condimentum orci. Aliquam eget tempor nibh. Sed at lacus vel augue interdum interdum non a magna. Vestibulum vitae sapien eu ante feugiat sodales vitae in mi."
+                            android:textColor="@color/card_title_text"
+                            android:textSize="@dimen/med_large_text"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</RelativeLayout>
