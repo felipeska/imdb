@@ -26,6 +26,11 @@ Este proyecto necesita las siguientes librerias:
 - [retrofit-1.3.0.jar][6]
 - [ActionBarSherlock-4.4.0][7]
 
+
+Descarga de apk
+====
+[Link][8]
+
   [1]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-02-034923_framed.png
   [2]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-02-034938_framed.png
   [3]: https://code.google.com/p/google-gson/
