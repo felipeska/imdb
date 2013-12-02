@@ -10,8 +10,8 @@ import com.actionbarsherlock.view.Menu;
 import com.arandasoft.android.imdb.adapter.ResultAdapter;
 import com.arandasoft.android.imdb.api.ImdbAPI;
 import com.arandasoft.android.imdb.bean.Movie;
+import com.arandasoft.android.imdb.log.Logger;
 import com.arandasoft.android.imdb.util.Utils;
-import com.arandasoft.android.log.Logger;
 
 import android.app.ProgressDialog;
 import android.content.Context;

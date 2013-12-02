@@ -6,7 +6,7 @@ import retrofit.RestAdapter;
 import retrofit.RestAdapter.LogLevel;
 import com.arandafost.android.imdb.rest.SearchService;
 import com.arandasoft.android.imdb.api.ImdbAPI;
-import com.arandasoft.android.log.Logger;
+import com.arandasoft.android.imdb.log.Logger;
 import com.squareup.okhttp.HttpResponseCache;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.picasso.OkHttpDownloader;

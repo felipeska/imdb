@@ -4,7 +4,7 @@
  * Created on December 11, 2012
  */
 
-package com.arandasoft.android.log;
+package com.arandasoft.android.imdb.log;
 
 import com.arandasoft.android.imdb.app.ImdbApp;
 import android.util.Log;
