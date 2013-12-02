@@ -1,4 +1,4 @@
-package com.arandafost.android.imdb.rest;
+package com.arandasoft.android.imdb.rest;
 
 import java.util.List;
 import com.arandasoft.android.imdb.bean.Movie;

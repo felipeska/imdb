@@ -3,9 +3,9 @@ package com.arandasoft.android.imdb.api;
 import java.util.List;
 import retrofit.Callback;
 import android.app.Activity;
-import com.arandafost.android.imdb.rest.SearchService;
 import com.arandasoft.android.imdb.app.ImdbApp;
 import com.arandasoft.android.imdb.bean.Movie;
+import com.arandasoft.android.imdb.rest.SearchService;
 
 /**
  * En esta clase se encuentran los metodos para realizar peticiones de datos al
@@ -30,7 +30,7 @@ public class ImdbAPI {
 
 	/**
 	 * metodo para acceder al RestAdapter y a partir de la interfaz de
-	 * {@linkplain com.arandafost.android.imdb.rest.SearchService} se ejecuta la
+	 * {@linkplain com.arandasoft.android.imdb.rest.SearchService} se ejecuta la
 	 * accion de busqueda o peticion al API
 	 * 
 	 * @param param
