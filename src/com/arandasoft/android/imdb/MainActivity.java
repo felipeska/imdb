@@ -54,7 +54,6 @@ public class MainActivity extends SherlockFragmentActivity {
 		/* Logo y titulo del actionbar */
 		getSupportActionBar().setTitle(R.string.title_search_movies);
 		getSupportActionBar().setLogo(R.drawable.logo);
-		getSupportActionBar().setDisplayShowCustomEnabled(true);
 
 		mEditTextSearch = (EditText) findViewById(R.id.dashboard_search_field);
 		mButtonSearch = (ImageButton) findViewById(R.id.search_button);

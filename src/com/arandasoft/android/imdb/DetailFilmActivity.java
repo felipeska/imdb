@@ -23,6 +23,8 @@ public class DetailFilmActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		getSupportActionBar().setLogo(R.drawable.logo);
+		
 		setContentView(R.layout.activity_detail_film);
 		mSummary = (TextView) findViewById(R.id.summary);
 		mCover = (ImageView) findViewById(R.id.screenCap);

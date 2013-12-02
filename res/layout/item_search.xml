@@ -59,6 +59,12 @@
                     android:layout_height="200.0dip"
                     android:background="@color/dark_bg" >
 
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
                     <ImageView
                         android:id="@+id/screenCap"
                         android:layout_width="fill_parent"

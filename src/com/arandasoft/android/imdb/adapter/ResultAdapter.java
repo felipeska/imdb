@@ -69,7 +69,6 @@ public class ResultAdapter extends BaseAdapter {
 			if (item.poster != null) {
 				((ImdbApp) context.getApplicationContext()).getPicasso()
 						.load(Utils.cropUrl(item.poster.imdb))
-						.placeholder(R.drawable.loading)
 						.into(placeHolder.mImageCover);
 			}
 		} catch (NullPointerException e) {
