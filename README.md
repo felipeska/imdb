@@ -29,7 +29,7 @@ Este proyecto necesita las siguientes librerias:
 
 Descarga de apk
 ====
-[Link][8]
+- [Link][8]
 
   [1]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-02-034923_framed.png
   [2]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-02-034938_framed.png
@@ -38,3 +38,4 @@ Descarga de apk
   [5]: http://square.github.io/picasso/
   [6]: http://square.github.io/retrofit/
   [7]: http://actionbarsherlock.com/
+  [8]: https://github.com/felipeska/imdb/raw/master/extra/imdb.apk
