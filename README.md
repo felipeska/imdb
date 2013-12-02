@@ -23,3 +23,8 @@ Este proyecto necesita las siguientes librerias:
 
   [1]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-02-034923_framed.png
   [2]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-02-034938_framed.png
+  [3]: https://code.google.com/p/google-gson/
+  [4]: http://square.github.io/okhttp/
+  [5]: http://square.github.io/picasso/
+  [6]: http://square.github.io/retrofit/
+  [7]: http://actionbarsherlock.com/
