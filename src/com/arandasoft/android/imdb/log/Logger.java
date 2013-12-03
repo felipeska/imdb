@@ -1,9 +1,13 @@
-
 package com.arandasoft.android.imdb.log;
 
 import com.arandasoft.android.imdb.app.ImdbApp;
 import android.util.Log;
 
+/**
+ * Clase que simplifica el uso de Logs dentro de la aplicacion
+ * 
+ * @author Felipe Calderon <felipeskabarragan@gmail.com>
+ * */
 public class Logger {
 
 	public static void d(String message) {

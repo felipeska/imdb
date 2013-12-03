@@ -6,12 +6,19 @@ import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Query;
 
+/**
+ * De una forma sencilla convertimos el API REST en una interfaz para su facil
+ * acceso y generar las peticiones
+ * 
+ * @author Felipe Calderon <felipeskabarragan@gmail.com>
+ * */
 public interface SearchService {
 
 	String TITLE = "title"; // titulo de la pelicula o serie a buscar.
 	String PARAM_FORMAT_DATA = "type"; // tipo de data de retorno (JSON, XML).
 	String PARAM_PLOT = "plot"; // nos muestra un resumen de la pelicula o serie
-	String PARAM_EPISODE = "episode";
+	String PARAM_EPISODE = "episode"; // si tiene episodios, suministra los
+										// mismos
 	String PARAM_LIMIT = "limit";
 	String PARAM_YEAR_STATUS = "yg";
 	String PARAM_MOVIE_TYPE = "mt";
@@ -22,6 +29,11 @@ public interface SearchService {
 	String PARAM_BUSINESS = "business";
 	String PARAM_TECHNICAL = "technical";
 
+	/**
+	 * Por medio de anotaciones podemos indicar como manejamos la peticion. El
+	 * tipo de solicitud que queremos hacer (GET,POST,PUT,DELETE,HEAD) y la
+	 * direccion relativa al recurso
+	 * */
 	@GET("/")
 	void listSearch(@Query(TITLE) String title,
 			@Query(PARAM_FORMAT_DATA) String type,
