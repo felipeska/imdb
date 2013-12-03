@@ -12,7 +12,6 @@ import com.arandasoft.android.imdb.api.ImdbAPI;
 import com.arandasoft.android.imdb.bean.Movie;
 import com.arandasoft.android.imdb.log.Logger;
 import com.arandasoft.android.imdb.util.Utils;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -31,8 +30,12 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
 /**
+ * <p>
  * Vista principal en la que el usuario puede realizar la busqueda de una serie
- * o pelicula
+ * o pelicula.
+ * </p>
+ * 
+ * @author Felipe Calderon <felipeskabarragan@gmail.com>
  * */
 public class MainActivity extends SherlockFragmentActivity {
 
@@ -55,6 +58,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		getSupportActionBar().setTitle(R.string.title_search_movies);
 		getSupportActionBar().setLogo(R.drawable.logo);
 
+		/* Componentes de tipo UI de la interfaz grafica */
 		mEditTextSearch = (EditText) findViewById(R.id.dashboard_search_field);
 		mButtonSearch = (ImageButton) findViewById(R.id.search_button);
 		mListResult = (ListView) findViewById(R.id.results);
@@ -66,15 +70,34 @@ public class MainActivity extends SherlockFragmentActivity {
 			public void onItemClick(AdapterView<?> adapter, View view, int pos,
 					long id) {
 
+				/* Intent el cual nos muestra el detalle de la pelicula o serie */
 				Intent intentResume = new Intent(MainActivity.this,
 						DetailFilmActivity.class);
-				intentResume.putExtra(DetailFilmActivity.KEY_TITLE,
-						((Movie) mAdapterResult.getItem(pos)).title);
+
+				/*
+				 * Paso de dato a traves del intent, en este caso el titulo de
+				 * la pelicula o serie
+				 */
+				intentResume.putExtra(
+						DetailFilmActivity.KEY_TITLE,
+						Utils.cleanTitle(((Movie) mAdapterResult.getItem(pos)).title));
+
+				/*
+				 * Paso de dato a traves del intent, en este caso el id de idbm
+				 * de la pelicula o serie
+				 */
 				intentResume.putExtra(DetailFilmActivity.KEY_IMDB_ID,
 						((Movie) mAdapterResult.getItem(pos)).imdb_id);
 				intentResume.putExtra(DetailFilmActivity.KEY_RESUME,
 						((Movie) mAdapterResult.getItem(pos)).plot);
+
+				/* Validando que el objeto de tipo Movie tenga poster */
 				if (((Movie) mAdapterResult.getItem(pos)).poster != null) {
+
+					/*
+					 * Paso de dato a traves del intent, en este caso la url del
+					 * cover de la pelicula o serie
+					 */
 					intentResume
 							.putExtra(DetailFilmActivity.KEY_URL_POSTER, Utils
 									.cropUrl(((Movie) mAdapterResult
@@ -104,6 +127,10 @@ public class MainActivity extends SherlockFragmentActivity {
 		}
 	};
 
+	/**
+	 * Por medio de esta interfaz de clase, validamos que cuando el usuario
+	 * presiona 'done' en el teclado ejecutemos una accion
+	 */
 	private final TextView.OnEditorActionListener mListenerDoneAction = new TextView.OnEditorActionListener() {
 
 		@Override
@@ -123,6 +150,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	 * */
 	private void validateSearch() {
 
+		/* el nombre de la pelicula o serie a buscar */
 		mParamSearch = mEditTextSearch.getText().toString();
 
 		boolean cancel = false;
@@ -131,6 +159,10 @@ public class MainActivity extends SherlockFragmentActivity {
 		if (TextUtils.isEmpty(mParamSearch)) {
 			focusView = mEditTextSearch;
 			cancel = true;
+			/*
+			 * validamos que el parametro de busqueda no contenga caracteres
+			 * especiales
+			 */
 		} else if ((pattern.matcher(mParamSearch).find())) {
 			Toast.makeText(this, getString(R.string.no_special_characters),
 					Toast.LENGTH_LONG).show();
@@ -176,6 +208,10 @@ public class MainActivity extends SherlockFragmentActivity {
 		});
 	}
 
+	/**
+	 * metodo el cual nos permite visualizar un progressDialog para informar al
+	 * usuario que se esta realizando una busqueda
+	 */
 	private void progressDialog(String message) {
 		mProgressSearch = new ProgressDialog(this, R.style.ImdbProgressDialog);
 		mProgressSearch.setMessage(message);

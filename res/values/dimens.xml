@@ -9,7 +9,7 @@
     <dimen name="half_unit">8.0dip</dimen>
     <dimen name="padding_item_search">4.0dip</dimen>
     <dimen name="fanart_height">192.0dip</dimen>
-    <dimen name="fanart_height_push">144.0dip</dimen>
+    <dimen name="fanart_height_push">190.0dip</dimen>
     <dimen name="med_large_text">22.0sp</dimen>
     <dimen name="small_unit">3.0dip</dimen>
 

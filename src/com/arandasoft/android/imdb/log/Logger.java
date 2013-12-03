@@ -1,8 +1,3 @@
-/*
- * WideTechLogger.java
- *
- * Created on December 11, 2012
- */
 
 package com.arandasoft.android.imdb.log;
 

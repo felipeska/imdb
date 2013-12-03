@@ -8,13 +8,19 @@ import com.arandasoft.android.imdb.bean.Movie;
 import com.arandasoft.android.imdb.rest.SearchService;
 
 /**
+ * <p>
  * En esta clase se encuentran los metodos para realizar peticiones de datos al
  * API y lectura de los datos en formato JSON que esta retorna
+ * </p>
+ * 
+ * @author Felipe Calderon <felipeskabarragan@gmail.com>
  * **/
 public class ImdbAPI {
 
 	public static String API_URL = "http://mymovieapi.com/"; // URL de accesso
 																// al API
+
+	/* variables por defecto para usar en la peticion */
 	public static String VALUE_TYPE_DATA = "json";
 	public static String VALUE_PLOT = "full";
 	public static int VALUE_EPISODE = 0;

@@ -22,7 +22,7 @@ public class ImdbApp extends Application {
 
 	private static boolean logEnabled = true; // Activamos lo logs
 	private static String logName = "imdbArandaSoft";
-	public static final int CACHE_SIZE = 10 * 1024 * 1024;
+	public static final int CACHE_SIZE = 10 * 1024 * 1024; // 10MB
 	public static final String NAME_CACHE = "idmb-http-cache";
 	private RestAdapter restAdapter;
 	private Picasso picasso;

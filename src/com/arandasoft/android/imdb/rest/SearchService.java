@@ -10,7 +10,7 @@ public interface SearchService {
 
 	String TITLE = "title"; // titulo de la pelicula o serie a buscar.
 	String PARAM_FORMAT_DATA = "type"; // tipo de data de retorno (JSON, XML).
-	String PARAM_PLOT = "plot";
+	String PARAM_PLOT = "plot"; // nos muestra un resumen de la pelicula o serie
 	String PARAM_EPISODE = "episode";
 	String PARAM_LIMIT = "limit";
 	String PARAM_YEAR_STATUS = "yg";

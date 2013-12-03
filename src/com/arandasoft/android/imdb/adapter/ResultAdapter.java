@@ -11,13 +11,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * <p>
+ * un adaptador para visualizar de manera customizada los elementos del
+ * {@link ListView} que contiene nuestra UI principal
+ * </p>
+ * 
+ * @author Felipe Calderon <felipeskabarragan@gmail.com>
+ * */
 public class ResultAdapter extends BaseAdapter {
 
 	private List<Movie> result;
 	private Context context;
 
+	/**
+	 * Constructor de clase
+	 * 
+	 * @param {@link List} result la lista de coincidencias con la busqueda
+	 * @param {@link Context} context el constesto desde la cual es instanciado
+	 */
 	public ResultAdapter(List<Movie> result, Context context) {
 		this.result = result;
 		this.context = context;
@@ -39,6 +54,9 @@ public class ResultAdapter extends BaseAdapter {
 		return position;
 	}
 
+	/**
+	 * clase que nos evita llamadas excesivas al findViewById()
+	 * */
 	private static class PlaceHolder {
 		TextView mTextViewName;
 		ImageView mImageCover;
@@ -56,6 +74,8 @@ public class ResultAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		Movie item = (Movie) getItem(position);
+
+		/* Con el uso de placeHolder reciclamos la vista */
 		PlaceHolder placeHolder;
 		if (convertView == null) {
 			convertView = View.inflate(context, R.layout.item_search, null);

@@ -33,7 +33,6 @@
                     android:layout_height="fill_parent"
                     android:scaleType="centerCrop"
                     tools:ignore="ContentDescription" />
-
             </FrameLayout>
         </LinearLayout>
 
@@ -111,7 +110,6 @@
                             android:textColor="@color/card_title_text"
                             android:textSize="@dimen/med_large_text"
                             tools:ignore="HardcodedText" />
-
                     </LinearLayout>
                 </LinearLayout>
             </FrameLayout>
