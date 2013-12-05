@@ -10,7 +10,6 @@ import com.actionbarsherlock.view.Menu;
 import com.arandasoft.android.imdb.adapter.ResultAdapter;
 import com.arandasoft.android.imdb.api.ImdbAPI;
 import com.arandasoft.android.imdb.bean.Movie;
-import com.arandasoft.android.imdb.log.Logger;
 import com.arandasoft.android.imdb.util.Utils;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -188,24 +187,37 @@ public class MainActivity extends SherlockFragmentActivity {
 			@Override
 			public void success(List<Movie> result, Response response) {
 
-				for (Movie movie : result) {
-					Logger.d("resume: " + movie.imdb_id);
-				}
 				mProgressSearch.cancel();
 				mAdapterResult = new ResultAdapter(result, MainActivity.this);
 				mListResult.setAdapter(mAdapterResult);
+				updateView(true);
 			}
 
 			@Override
 			public void failure(RetrofitError error) {
 				mProgressSearch.cancel();
-				Toast.makeText(
-						MainActivity.this,
-						getString(R.string.search_not_found) + " \""
-								+ mParamSearch + "\"", Toast.LENGTH_LONG)
-						.show();
+				updateView(false);
+				findViewById(R.id.welcomeSearch).setVisibility(View.GONE);
+				findViewById(R.id.noData).setVisibility(View.VISIBLE);
 			}
 		});
+	}
+
+	private void updateView(boolean status) {
+
+		if (status) {
+			findViewById(R.id.welcomeSearch).setVisibility(View.GONE);
+			if (findViewById(R.id.noData).getVisibility() == View.VISIBLE)
+				findViewById(R.id.noData).setVisibility(View.GONE);
+		} else {
+			findViewById(R.id.noData).setVisibility(View.VISIBLE);
+			if (findViewById(R.id.welcomeSearch).getVisibility() == View.VISIBLE)
+				findViewById(R.id.welcomeSearch).setVisibility(View.GONE);
+
+			if (mListResult.getAdapter() != null) {
+				((ResultAdapter)mListResult.getAdapter()).clear();
+			}
+		}
 	}
 
 	/**

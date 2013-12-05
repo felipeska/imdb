@@ -2,6 +2,7 @@ package com.arandasoft.android.imdb;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 import com.arandasoft.android.imdb.app.ImdbApp;
 import com.squareup.picasso.Picasso;
 import android.os.Bundle;
@@ -35,6 +36,8 @@ public class DetailFilmActivity extends SherlockFragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getSupportActionBar().setLogo(R.drawable.logo);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
 
 		setContentView(R.layout.activity_detail_film);
 		mSummary = (TextView) findViewById(R.id.summary);
@@ -57,6 +60,16 @@ public class DetailFilmActivity extends SherlockFragmentActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getSupportMenuInflater().inflate(R.menu.detail_film, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			finish();
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 	/**

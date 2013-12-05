@@ -54,6 +54,11 @@ public class ResultAdapter extends BaseAdapter {
 		return position;
 	}
 
+	public void clear() {
+		this.result.clear();
+		notifyDataSetChanged();
+	}
+
 	/**
 	 * clase que nos evita llamadas excesivas al findViewById()
 	 * */

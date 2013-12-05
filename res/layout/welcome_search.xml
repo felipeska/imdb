@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/noData"
+    android:id="@+id/welcomeSearch"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@null"
     android:gravity="center"
     android:orientation="vertical"
-    android:visibility="gone" >
+    android:visibility="visible" >
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/frown_cloud" />
+        android:src="@drawable/ic_mv" />
 
     <TextView
         style="@style/TextTitle"
@@ -21,13 +21,13 @@
         android:ellipsize="end"
         android:padding="8.0dip"
         android:singleLine="true"
-        android:text="@string/sorry"
+        android:text="@string/welcome"
         android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@color/white"
         android:textSize="22.0sp" />
 
     <TextView
-        android:id="@+id/retry"
+        android:id="@+id/intro"
         style="@style/TextTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

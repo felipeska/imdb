@@ -7,10 +7,13 @@
     <string name="title_search_movies">Busqueda</string>
     <string name="dashboard_search_field_hint">Película o serie a buscar&#8230;</string>
     <string name="sorry">Lo sentimos</string>
-    <string name="no_match_found">No encontramos la película y/o serie que buscas</string>
+    <string name="no_match_found">No encontramos la película o serie que buscas</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="intro_search">Escribe el nombre de la película o serie que quieras buscar</string>
     <string name="default_title">Default title</string>
     <string name="no_special_characters">La búsqueda no permite caracteres especiales.</string>
     <string name="search_not_found">No se encontraron resultados que coincidan con </string>
     <string name="title_activity_detail_film">Resumen</string>
     <string name="resume_title">Resumen</string>
+
 </resources>

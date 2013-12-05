@@ -64,6 +64,10 @@
         </LinearLayout>
     </RelativeLayout>
 
+    <include
+        android:layout_below="@+id/search_header"
+        layout="@layout/welcome_search" />
+
     <ListView
         android:id="@+id/results"
         android:layout_width="match_parent"
@@ -74,5 +78,9 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="0.0dip"
         android:listSelector="@android:color/transparent" />
+
+    <include
+        android:layout_below="@+id/search_header"
+        layout="@layout/empty_data" />
 
 </RelativeLayout>
