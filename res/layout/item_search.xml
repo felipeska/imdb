@@ -4,10 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/half_unit"
-    android:paddingLeft="@dimen/padding_item_search"
-    android:paddingRight="@dimen/padding_item_search" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -16,37 +13,6 @@
         android:orientation="vertical"
         tools:ignore="UselessParent" >
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@drawable/selectable_background_imdb"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:paddingRight="@dimen/half_unit" >
-
-                <TextView
-                    android:id="@+id/MovieName"
-                    style="@style/TextTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="sans-serif-light"
-                    android:padding="@dimen/half_unit"
-                    android:singleLine="true"
-                    android:text="@string/default_title"
-                    android:textColor="@color/text_dark"
-                    android:textSize="@dimen/large_text"
-                    tools:ignore="HardcodedText" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="2.0dip"
-                android:background="@color/pressed_imdb" />
 
             <LinearLayout
                 android:id="@+id/movieContent"
@@ -77,25 +43,32 @@
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="top"
                         android:background="@drawable/poster_gradient"
                         android:gravity="center_vertical" >
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            tools:ignore="UselessLeaf" >
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/MovieName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/small_unit"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/large_text"
+                                android:text="@string/default_title"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/large_text" />
+
                         </LinearLayout>
 
-                        <View
-                            android:layout_width="fill_parent"
-                            android:layout_height="2.0dip"
-                            android:background="@color/pressed_imdb" />
+                      
                     </LinearLayout>
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
