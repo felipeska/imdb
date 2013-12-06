@@ -76,7 +76,7 @@
         android:layout_marginTop="20dp"
         android:cacheColorHint="@android:color/transparent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="0.0dip"
+        android:dividerHeight="2.0dip"
         android:listSelector="@android:color/transparent" />
 
     <include
