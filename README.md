@@ -31,7 +31,7 @@ Descarga de apk
 ====
 - [Link][8]
 
-  [1]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-02-034923_framed.png
+  [1]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-05-200007_framed.png
   [2]: https://raw.github.com/felipeska/imdb/master/extra/device-2013-12-02-034938_framed.png
   [3]: https://code.google.com/p/google-gson/
   [4]: http://square.github.io/okhttp/
