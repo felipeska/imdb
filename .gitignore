@@ -1,7 +1,14 @@
 .classpath
+
 .project
+
 .settings
+
 eclipsebin
+
+.gradle/
+
+local.properties
 
 bin
 gen
